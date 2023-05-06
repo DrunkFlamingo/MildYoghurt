@@ -7,6 +7,7 @@ TagManager:
   - LockdownButton
   - CatCage
   - AnimalCage
+  - Guards
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Animals
   - Guards
   - StealthSystemLight
-  - 
+  - LockdownButton
   - 
   - 
   - 
@@ -46,4 +47,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 2136551703
     locked: 0

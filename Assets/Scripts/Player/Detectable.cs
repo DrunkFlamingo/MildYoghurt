@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cat {
+namespace Cat.Player {
     public class Detectable : MonoBehaviour
     {
         private List<Collider2D> overlappedLights = new List<Collider2D>();
