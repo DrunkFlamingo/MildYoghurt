@@ -8,6 +8,7 @@ TagManager:
   - CatCage
   - AnimalCage
   - Guards
+  - SwitchBox
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - Guards
   - StealthSystemLight
   - LockdownButton
-  - 
-  - 
-  - 
+  - Floor
+  - VentSystem
+  - Platforms
   - 
   - 
   - 
@@ -45,8 +46,20 @@ TagManager:
   - name: Background
     uniqueID: 4271629391
     locked: 0
+  - name: Level
+    uniqueID: 1223962719
+    locked: 0
+  - name: Props
+    uniqueID: 1386197631
+    locked: 0
+  - name: Vents
+    uniqueID: 2754763691
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 1113336129
     locked: 0
   - name: UI
     uniqueID: 2136551703
