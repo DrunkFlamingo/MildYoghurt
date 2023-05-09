@@ -20,6 +20,7 @@ TagManager:
   - Guards
   - StealthSystemLight
   - LockdownButton
+  - Ground
   - Floor
   - VentSystem
   - Platforms
@@ -57,6 +58,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 1113336129
     locked: 0
   - name: Foreground
     uniqueID: 1113336129
