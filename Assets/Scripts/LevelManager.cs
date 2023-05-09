@@ -8,6 +8,10 @@ namespace Cat {
         [Header("Level Objectives")]
         [SerializeField] private int numCatsRequired = 3;
 
+        [Header("Level Objects")]
+        [SerializeField] private GameObject ventSystemParent;
+        [SerializeField] private GameObject mainLevelParent;
+
         [Header("Lockdown")]
         [SerializeField] private GameObject[] lockdownDoors; //used for triggering visual change in doors before transitioning to game over
         [SerializeField] private float lockdownTimerDuration = 15f; //timer after lockdown trigger to escape the level.
@@ -16,6 +20,10 @@ namespace Cat {
 
         public bool lockdownTriggered {get; private set;} = false;
         public float lockdownTimer {get; private set;} = 0f;
+
+        private SpriteRenderer[] ventSystemRenderers;
+        private SpriteRenderer[] mainLevelRenderers;
+
 
         public void TriggerLockdown() {
             if (lockdownTriggered) return;
@@ -30,6 +38,8 @@ namespace Cat {
                 Destroy(instance.gameObject);
                 instance = this;
             }
+            ventSystemRenderers = ventSystemParent.GetComponentsInChildren<SpriteRenderer>();
+            mainLevelRenderers = mainLevelParent.GetComponentsInChildren<SpriteRenderer>();
         }
 
         void Update() {
