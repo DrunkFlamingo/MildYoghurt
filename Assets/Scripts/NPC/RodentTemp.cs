@@ -22,15 +22,6 @@ public class RodentTemp : MonoBehaviour
         _myRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            _isFreed = true;
-        }
-    }
-
     private void FixedUpdate()
     {
         if (_isFreed == true)
@@ -48,6 +39,11 @@ public class RodentTemp : MonoBehaviour
         }
     }
 
+    public void ChangeIsFreed()
+    {
+        _isFreed = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("SwitchBox"))
@@ -56,6 +52,9 @@ public class RodentTemp : MonoBehaviour
             Destroy(col);
             Destroy(lightObject.GetComponent<Collider2D>());
             lightObject.GetComponent<Light2D>().intensity = 0.1f;
+            Destroy(this.GetComponent<Rigidbody2D>());
+            Destroy(this.GetComponent<Collider2D>());
+            Destroy(this);
         }
     }
 }
