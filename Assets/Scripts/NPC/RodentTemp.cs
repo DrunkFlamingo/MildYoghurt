@@ -1,14 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class RodentTemp : MonoBehaviour
 {
     [SerializeField]private GameObject switchBoxObject;
+    [SerializeField] private GameObject lightObject;
     private Transform _switchBoxTransform;
-    private Collider _switchBoxCollider;
-    private Transform _myTransform;
+    private Rigidbody2D _myRigidbody;
 
     [SerializeField] private float speed = 1;
     private bool _isFreed;
@@ -16,45 +18,43 @@ public class RodentTemp : MonoBehaviour
     void Start()
     {
         _isFreed = false;
-        _myTransform = transform;
         _switchBoxTransform = switchBoxObject.transform;
-        _switchBoxCollider = switchBoxObject.GetComponent<Collider>();
+        _myRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            _isFreed = true;
-        }
         if (_isFreed == true)
         {
-            if (_switchBoxTransform.position.x >= 0)
+            if (_switchBoxTransform.position.x >= _myRigidbody.position.x)
             {
-                _myTransform.position = new Vector3(_myTransform.position.x + (speed * Time.deltaTime),
-                    _myTransform.position.y, _myTransform.position.z);
+                _myRigidbody.position = new Vector2(_myRigidbody.position.x + (speed * Time.fixedDeltaTime),
+                    _myRigidbody.position.y);
             }
-            else if(_switchBoxTransform.position.x < 0)
+            else if(_switchBoxTransform.position.x < _myRigidbody.position.x)
             {
-                _myTransform.position = new Vector3(_myTransform.position.x + (speed * Time.deltaTime *(-1)),
-                    _myTransform.position.y, _myTransform.position.z);
+                _myRigidbody.position = new Vector2(_myRigidbody.position.x - (speed * Time.fixedDeltaTime),
+                    _myRigidbody.position.y);
             }
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void ChangeIsFreed()
     {
-        Debug.Log(collision.gameObject.name);
-        if (collision.collider == _switchBoxCollider)
+        _isFreed = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("SwitchBox"))
         {
-            _isFreed = true;
-            Debug.Log("Hit SwitchBox");
-        }
-        if (collision.gameObject.CompareTag("SwitchBox"))
-        {
-            _isFreed = true;
-            Debug.Log("Hit SwitchBox");
+            _isFreed = false;
+            Destroy(col);
+            Destroy(lightObject.GetComponent<Collider2D>());
+            lightObject.GetComponent<Light2D>().intensity = 0.1f;
+            Destroy(this.GetComponent<Rigidbody2D>());
+            Destroy(this.GetComponent<Collider2D>());
+            Destroy(this);
         }
     }
 }
