@@ -104,7 +104,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2136551703
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0.8110068, b: 0, a: 1}
@@ -159,7 +159,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 4.47, y: 0}
@@ -236,7 +236,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2136551703
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0.8110068, b: 0, a: 1}
@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 6696433798251706546}
   - component: {fileID: 6696433798251706556}
   - component: {fileID: 6696433798251706557}
+  - component: {fileID: 652828011274739333}
   m_Layer: 7
   m_Name: Guard
   m_TagString: Guards
@@ -284,7 +285,7 @@ Transform:
   - {fileID: 5226024248857704408}
   - {fileID: 6696433797621723331}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6696433798251706546
 SpriteRenderer:
@@ -378,6 +379,32 @@ MonoBehaviour:
   patrolPointA: {fileID: 0}
   patrolPointB: {fileID: 0}
   detectedPlayer: 0
+--- !u!61 &652828011274739333
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6696433798251706544}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &6696433797430124891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -389,6 +416,26 @@ PrefabInstance:
     - target: {fileID: 1470445424434452097, guid: 500af3bf9c0ab214eaf56c28c9b3c834, type: 3}
       propertyPath: m_Name
       value: StealthSystemLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470445424434452098, guid: 500af3bf9c0ab214eaf56c28c9b3c834, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470445424434452098, guid: 500af3bf9c0ab214eaf56c28c9b3c834, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[2]
+      value: -1540203605
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470445424434452098, guid: 500af3bf9c0ab214eaf56c28c9b3c834, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[3]
+      value: 1386197631
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470445424434452098, guid: 500af3bf9c0ab214eaf56c28c9b3c834, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[4]
+      value: 1223962719
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470445424434452098, guid: 500af3bf9c0ab214eaf56c28c9b3c834, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[5]
+      value: 1113336129
       objectReference: {fileID: 0}
     - target: {fileID: 1470445424434452099, guid: 500af3bf9c0ab214eaf56c28c9b3c834, type: 3}
       propertyPath: m_RootOrder
@@ -433,6 +480,10 @@ PrefabInstance:
     - target: {fileID: 1470445424434452099, guid: 500af3bf9c0ab214eaf56c28c9b3c834, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470445424434452102, guid: 500af3bf9c0ab214eaf56c28c9b3c834, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1470445424434452102, guid: 500af3bf9c0ab214eaf56c28c9b3c834, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
