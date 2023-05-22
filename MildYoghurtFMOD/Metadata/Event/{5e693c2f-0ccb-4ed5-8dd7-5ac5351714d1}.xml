@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{5e693c2f-0ccb-4ed5-8dd7-5ac5351714d1}">
 		<property name="name">
-			<value>ANIM_dog_bark</value>
+			<value>NPC_dog_bark</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -100,6 +100,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{45bbb09a-f055-412e-ba7a-faae17006ed5}">
+		<property name="volume">
+			<value>-21.5</value>
+		</property>
 		<property name="name">
 			<value>PLACEHOLDER</value>
 		</property>

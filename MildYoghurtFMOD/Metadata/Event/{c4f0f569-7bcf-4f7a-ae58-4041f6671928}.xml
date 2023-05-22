@@ -174,10 +174,10 @@
 	</object>
 	<object class="LoopRegion" id="{362f4351-bd50-413b-a757-4a96137b2315}">
 		<property name="position">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
-			<value>74.5</value>
+			<value>75.5</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{450fe9b1-b676-4a47-aeb0-35c2d10fd319}</destination>
@@ -259,7 +259,7 @@
 	</object>
 	<object class="AutomationPoint" id="{7776961b-ea66-479e-abed-9fd0a2c7dce1}">
 		<property name="position">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -306,7 +306,7 @@
 	</object>
 	<object class="AutomationPoint" id="{cc81ca42-7d3f-4c41-bf31-b75804b69809}">
 		<property name="position">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="value">
 			<value>1</value>
