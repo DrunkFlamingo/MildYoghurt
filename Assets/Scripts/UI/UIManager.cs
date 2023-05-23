@@ -15,6 +15,7 @@ namespace Cat.UI {
 
         private Cat.LevelManager levelManager;
         private TextMeshProUGUI lockdownTimerText;
+
         //Audio
         private EventInstance lockdownTimerSound;
 
@@ -31,6 +32,7 @@ namespace Cat.UI {
 
         void Start() {
             levelManager = Cat.LevelManager.instance;
+
             //Audio
             lockdownTimerSound = AudioManager.instance.CreateEventInstance(FMODEvents.instance.lockdownTimerSound);
 
@@ -39,7 +41,8 @@ namespace Cat.UI {
             if (levelManager.lockdownTriggered) {
                 lockdownTimer.SetActive(true);
                 lockdownTimerText.text = ((double)Mathf.Max(levelManager.lockdownTimer, 0)).ToString("0.00");
-                //Audio start playing
+
+                //Audio start playing sound effect. Should be placed somewhere else? Right now sound plays when exiting game mode.
                 lockdownTimerSound.start();
             }
         }

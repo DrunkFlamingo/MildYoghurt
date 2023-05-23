@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{1112f866-0128-42bd-bf0d-5e06928fe0c7}">
+		<property name="name">
+			<value>LockdownState</value>
+		</property>
+		<relationship name="folder">
+			<destination>{575d6764-6d70-432c-ab1d-dfd5912d7603}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{8c8eb2ad-8fc4-47a2-841e-dcf7e8300289}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{8c8eb2ad-8fc4-47a2-841e-dcf7e8300289}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

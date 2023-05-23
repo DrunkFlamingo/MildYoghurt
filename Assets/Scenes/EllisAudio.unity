@@ -394,14 +394,21 @@ MonoBehaviour:
       Data2: 1231450219
       Data3: -194268998
       Data4: 603206352
-    Path: event:/UI_lockdown_timer
+    Path: event:/UI/UI_lockdown_timer
   <panickButtonSound>k__BackingField:
     Guid:
       Data1: 1743757726
       Data2: 1258292345
       Data3: 427928460
       Data4: 161373960
-    Path: event:/Player_footsteps
+    Path: event:/Player/Player_footsteps
+  <guardDetectionSound>k__BackingField:
+    Guid:
+      Data1: 861143834
+      Data2: 1212699432
+      Data3: -1000460628
+      Data4: -1308618021
+    Path: event:/NPC/NPC_Guard_Alert
 --- !u!1 &1033091825
 GameObject:
   m_ObjectHideFlags: 0

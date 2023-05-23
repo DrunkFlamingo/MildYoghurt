@@ -14,6 +14,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Panick Button Hit")]
     [field: SerializeField] public EventReference panickButtonSound { get; private set; }
 
+    [field: Header("Guard detection alert")]
+    [field: SerializeField] public EventReference guardDetectionSound { get; private set; }
+
 
 
     public static FMODEvents instance { get; private set; }
