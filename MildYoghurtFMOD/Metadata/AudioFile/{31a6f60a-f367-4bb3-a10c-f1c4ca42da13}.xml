@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{31a6f60a-f367-4bb3-a10c-f1c4ca42da13}">
+		<property name="assetPath">
+			<value>NPC_guard_flashlight_off-001.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.7414512471655329</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e0100d49-33f0-48e2-8407-0a547643f252}</destination>
+		</relationship>
+	</object>
+</objects>
