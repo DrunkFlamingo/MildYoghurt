@@ -17,6 +17,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Guard detection alert")]
     [field: SerializeField] public EventReference guardDetectionSound { get; private set; }
 
+    [field: Header ("Player Footstep")]
+    [field: SerializeField] public EventReference playerFootstepSound { get; private set; }
+
 
 
     public static FMODEvents instance { get; private set; }
