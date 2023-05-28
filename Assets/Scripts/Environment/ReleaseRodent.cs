@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CageInteractButton : MonoBehaviour
+public class ReleaseRodent : MonoBehaviour
 {
     private bool _isInRange = false;
+    [Header("Rodents function to start itself")]
     [SerializeField]private UnityEvent _releaseRodent;
 
+    
     private void Update()
     {
         if (_isInRange)

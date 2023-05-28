@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class RodentTemp : MonoBehaviour
+public class Bunny : MonoBehaviour
 {
     [SerializeField]private GameObject switchBoxObject;
     [SerializeField] private GameObject lightObject;
