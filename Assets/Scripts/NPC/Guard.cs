@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cat.Player;
+using FMOD.Studio;
 
 namespace Cat.NPC {
     public class Guard : MonoBehaviour
@@ -24,6 +25,9 @@ namespace Cat.NPC {
 
         public bool detectedPlayer = false;
 
+        //Audio
+        private EventInstance guardDetectionSound;
+
 
         void Start() {
             // Set up contact filter
@@ -32,6 +36,9 @@ namespace Cat.NPC {
             contactFilter.useLayerMask = true;
             // reference to own rigidbody
             rb = GetComponent<Rigidbody2D>();
+
+            //Audio
+            guardDetectionSound = AudioManager.instance.CreateEventInstance(FMODEvents.instance.guardDetectionSound);
         }
 
 
@@ -98,6 +105,9 @@ namespace Cat.NPC {
                 GameObject player = results[0].gameObject;
                 if (player.GetComponent<Detectable>().isDetectable) {
                     GuardDetectsPlayer();
+
+                    //Audio
+                    guardDetectionSound.start();
                     return;
                 }
             }

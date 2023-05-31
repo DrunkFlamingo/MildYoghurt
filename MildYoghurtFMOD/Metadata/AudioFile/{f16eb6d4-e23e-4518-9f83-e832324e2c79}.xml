@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f16eb6d4-e23e-4518-9f83-e832324e2c79}">
+		<property name="assetPath">
+			<value>UI_objective_lockdown_countdown.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>14</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e0100d49-33f0-48e2-8407-0a547643f252}</destination>
+		</relationship>
+	</object>
+</objects>

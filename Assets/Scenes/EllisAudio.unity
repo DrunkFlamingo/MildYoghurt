@@ -344,6 +344,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752913094}
   m_CullTransparentMesh: 1
+--- !u!1 &764133216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 764133217}
+  - component: {fileID: 764133218}
+  m_Layer: 0
+  m_Name: FMOD Events
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &764133217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764133216}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &764133218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764133216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4f6bf2443c5c04fa46fafacd3c7086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <lockdownTimerSound>k__BackingField:
+    Guid:
+      Data1: -22205327
+      Data2: 1231450219
+      Data3: -194268998
+      Data4: 603206352
+    Path: event:/UI/UI_lockdown_timer
+  <panickButtonSound>k__BackingField:
+    Guid:
+      Data1: 1743757726
+      Data2: 1258292345
+      Data3: 427928460
+      Data4: 161373960
+    Path: event:/Player/Player_footsteps
+  <guardDetectionSound>k__BackingField:
+    Guid:
+      Data1: 861143834
+      Data2: 1212699432
+      Data3: -1000460628
+      Data4: -1308618021
+    Path: event:/NPC/NPC_Guard_Alert
+  <playerFootstepSound>k__BackingField:
+    Guid:
+      Data1: 1743757726
+      Data2: 1258292345
+      Data3: 427928460
+      Data4: 161373960
+    Path: event:/Player/Player_footsteps
 --- !u!1 &1033091825
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +766,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1635764213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635764214}
+  - component: {fileID: 1635764215}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1635764214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635764213}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1870645678}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1635764215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635764213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634e7c0aac5441042acf79396274d989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1870645676
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,7 +822,7 @@ GameObject:
   - component: {fileID: 1870645678}
   - component: {fileID: 1870645677}
   m_Layer: 0
-  m_Name: TestAudio
+  m_Name: AMB_lab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -726,11 +843,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1543729216
-      Data2: 1181552937
-      Data3: -598550346
-      Data4: 344895721
-    Path: event:/TEST
+      Data1: -990841495
+      Data2: 1333427151
+      Data3: 1094736046
+      Data4: 672753654
+    Path: event:/AMB_lab
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -749,13 +866,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870645676}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1635764214}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1957351602
 GameObject:
@@ -1013,6 +1130,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6696433797621723330, guid: 9a3aec3fa93bdf146b292925a859c8b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6696433798251706544, guid: 9a3aec3fa93bdf146b292925a859c8b8, type: 3}
       propertyPath: m_Name
       value: Guard

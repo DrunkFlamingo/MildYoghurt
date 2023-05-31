@@ -8,7 +8,7 @@
 			<value>5</value>
 		</property>
 		<relationship name="folder">
-			<destination>{f12558ed-d3be-457f-83ad-78e454c37f76}</destination>
+			<destination>{f2346dfb-9961-4b78-9c55-3a6fab5f37bb}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{913b5c3a-caca-4092-9d7a-4f7bb7868a05}</destination>
@@ -120,7 +120,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{98baa1b1-ffbc-4cdc-b509-507ef510f33c}">
 		<property name="volume">
-			<value>-37</value>
+			<value>-25</value>
 		</property>
 		<property name="name">
 			<value>Ventilation</value>
@@ -174,10 +174,10 @@
 	</object>
 	<object class="LoopRegion" id="{362f4351-bd50-413b-a757-4a96137b2315}">
 		<property name="position">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
-			<value>74.5</value>
+			<value>75.5</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{450fe9b1-b676-4a47-aeb0-35c2d10fd319}</destination>
@@ -259,7 +259,7 @@
 	</object>
 	<object class="AutomationPoint" id="{7776961b-ea66-479e-abed-9fd0a2c7dce1}">
 		<property name="position">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -306,7 +306,7 @@
 	</object>
 	<object class="AutomationPoint" id="{cc81ca42-7d3f-4c41-bf31-b75804b69809}">
 		<property name="position">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="value">
 			<value>1</value>
